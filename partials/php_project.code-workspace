@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../php_project"
+		},
+		{
+			"path": "../../em"
+		},
+		{
+			"path": "../../forum"
+		},
+		{
+			"path": "../../Project couselling"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}
