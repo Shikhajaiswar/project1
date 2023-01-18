@@ -38,9 +38,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 <body>
     <?php
-    // include 'dbconnect.php';
-    $conn = mysqli_connect("localhost:3307", "root", "", "portforlio");
-    // include 'header.php';
+    include 'dbconnect.php';
+    //$conn = mysqli_connect("localhost:3307", "root", "", "portforlio");
+    include 'header.php';
     $a = 0;
     $id = $_GET['id'];
     $query = "SELECT * FROM `a` where applicationno='$id'";
