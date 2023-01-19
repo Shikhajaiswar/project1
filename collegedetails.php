@@ -118,7 +118,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                             }
                             if ($one > $rank) {
                                 $q = 1;
-                                echo "<div class='card text-center m-3 p-3' style='width: 28rem;'>
+                                echo "<div class='card text-center rounded-3 border-1 shadow m-3 p-3' style='width: 28rem;'>
                     <div class='card-body'>
                         <h5 class='card-title'>$choice1</h5>
                         
