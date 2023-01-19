@@ -112,8 +112,8 @@
                         <h3>Services</h3>
                         <ul>
                             <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
+                            <li><a href="rankvsmarks.php">Rank Vs Marks Analysis</a></li>
+                            <li><a href="percentilevsrank.php">Percentile Vs Rank Analysis</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
@@ -121,7 +121,7 @@
                         <ul>
                             <li><a href="#">Company</a></li>
                             <li><a href="aboutus.php">Team</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="contact.php">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
