@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 <body>
     <?php
     include 'dbconnect.php';
-    //$conn = mysqli_connect("localhost", "root", "", "college");
+    //$conn = mysqli_connect("localhost:3307", "root", "", "portforlio");
     include 'header.php';
     $a = 0;
     $id = $_GET['id'];
@@ -90,7 +90,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                     <?php
                     $a = 0;
                     $q = 0;
-                    $con = mysqli_connect("localhost:3307", "root", "", "portforlio");
+                    $con = mysqli_connect("localhost", "root", "", "college");
                     if ($con) {
                         $a = 1;
                         $b = '';
