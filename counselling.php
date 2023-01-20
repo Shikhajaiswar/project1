@@ -42,7 +42,7 @@
 <body bgcolor="wheat">
     <?php
     $a = 0;
-    $con = mysqli_connect("localhost:3307", "root", "", "portforlio");
+    $con = mysqli_connect("localhost", "root", "", "college");
     if ($con) {
         if (isset($_POST['submit'])) {
             $name = $_POST['username'];
@@ -53,12 +53,12 @@
             $choice3 = $_POST['choice3'];
             $choice4 = $_POST['choice4'];
 
-            $bull = "INSERT INTO `a` (`name`, `applicationno`, `rank` ,`choice1` , `choice2`, `choice3` , `choice4`) VALUES ('$name', '$applicationno', '$rank' ,'$choice1','$choice2','$choice3','$choice4');";
+            $bull = "INSERT INTO `collegedata` (`name`, `applicationno`, `rank` ,`choice1` , `choice2`, `choice3` , `choice4`) VALUES ('$name', '$applicationno', '$rank' ,'$choice1','$choice2','$choice3','$choice4');";
 
             if ($con->query($bull) == true) {
                 $a = 1;
 
-                $query = "SELECT * FROM `a` where applicationno='$applicationno'";
+                $query = "SELECT * FROM `collegedata` where applicationno='$applicationno'";
                 $query_run = mysqli_query($con, $query);
 
                 while ($row = mysqli_fetch_array($query_run)) {
