@@ -169,7 +169,7 @@ else{
 
         </div>
         <div class="p-2 text-center m-5">
-                        <a href="couselling.php">
+                        <a href="counselling.php">
                             <button type="button" class="btn btn-success p-3" style="width:23rem; border-radius:3rem;">Proceed</button>
 
                         </a>
