@@ -119,7 +119,7 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="home.png">Home</a></li>
+                            <li><a href="home.php">Home</a></li>
                             <li><a href="aboutus.php">Team</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
                         </ul>
