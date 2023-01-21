@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    $sql = "INSERT INTO `registration` (`applicationno`, `fname`, `lname`,`dob`, `gender`, `country`, `phone`, `email`,`a1`,`city`, `state`, `zip`,`photo`, `sign`, `aadhaarNo`, `aadhaar`) VALUES ( '$applicationno','$fname','$lname','$dob','$gender', '$country', '$phone', '$email', '$a1', '$city', '$state', '$zip', '$photo', '$sign', '$aadhaarNo', '$aadhaar' )";
+    $sql = "INSERT INTO `registration` (`applicationno`, `fname`, `lname`,`dob`, `gender`, `country`, `phone`, `email`,`a1`,`city`, `state`, `zip`,`photo`, `sign`, `aadhaarNo```, `aadhaar`) VALUES ( '$applicationno','$fname','$lname','$dob','$gender', '$country', '$phone', '$email', '$a1', '$city', '$state', '$zip', '$photo', '$sign', '$aadhaarNo', '$aadhaar' )";
     $result = mysqli_query($conn, $sql);
     if ($result) {
         $showAlert = true;
