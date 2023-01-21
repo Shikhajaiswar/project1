@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dss2 = 'upload/' . $filename2;
     move_uploaded_file($filetemo2, $dss2);
 
-    $sql = "INSERT INTO `college` (`applicationno`, `fname`, `lname`,`dob`, `gender`, `country`, `phone`, `email`,`a1`,`city`, `state`, `zip`,`photo`, `sign`, `aadhaarNo```, `aadhaar`) VALUES ( '$applicationno','$fname','$lname','$dob','$gender', '$country', '$phone', '$email', '$a1', '$city', '$state', '$zip', '$dss', '$dss1', '$aadhaarNo', '$dss2' )";
+    $sql = "INSERT INTO `registration` (`applicationno`, `fname`, `lname`,`dob`, `gender`, `country`, `phone`, `email`,`a1`,`city`, `state`, `zip`,`photo`, `sign`, `aadhaarNo`, `aadhaar`) VALUES ( '$applicationno','$fname','$lname','$dob','$gender', '$country', '$phone', '$email', '$a1', '$city', '$state', '$zip', '$dss', '$dss1', '$aadhaarNo', '$dss2' )";
     $result = mysqli_query($conn, $sql);
     if ($result) {
          $showAlert = true;
