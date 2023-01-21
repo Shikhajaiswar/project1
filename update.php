@@ -67,7 +67,9 @@ if ($conn) {
         $dss2 = 'upload/' . $filename2;
         move_uploaded_file($filetemo2, $dss2);
 
-        $query = " udpate registration set applicationno = '$applicationno', fname='$fname',lname='$lname',lname='$lname' ,dob='$dob' , gender='$gender' , country='$country' , phone= '$phone' , email='$email',a1='$a1' ,city='$city',state='$state' , zip='$zip' , photo='$dss' , sign='$dss1' , aadhaarNo='$aadhaarNo' , aadhaar='$dss2' where applicationno=$idu  ";
+//      //$query = " udpate registration set applicationno = '$applicationno', fname='$fname',lname='$lname',lname='$lname' ,dob='$dob' , gender='$gender' , country='$country' , phone= '$phone' , email='$email',a1='$a1' ,city='$city',state='$state' , zip='$zip' , photo='$dss' , sign='$dss1' , aadhaarNo='$aadhaarNo' , aadhaar='$dss2' where applicationno=$idu  ";
+        $query = "UPDATE `registration` SET `fname`='$fname',`lname`='$lname',`dob`='$dob',`gender`='$gender',`country`='$country',`phone`='$phone',`email`='$email',`a1`='$a1',`city`='$city',`state`='$state',`zip`='$zip',`photo`='$dss',`sign`='$dss1',`aadhaarNo```='$aadhaarNo',`aadhaar`='$dss2' WHERE `applicationno`='$idu' ";
+
         $result = mysqli_query($conn, $query);
         if ($result) {
             $showAlert = true;
@@ -121,6 +123,16 @@ if ($conn) {
             <span aria-hidden="true">&times;</span>
         </button>
     </div> ';
+        echo "<script>
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
+            
+            </script>";
     }
     ?>
 
