@@ -30,24 +30,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $city = $_POST["city"];
     $state = $_POST["state"];
     $zip = $_POST["zip"];
-    $photo = $_POST["photo"];
-    $sign = $_POST["sign"];
+    $photo = $_FILES["photo"];
+    $sign = $_FILES["sign"];
     $aadhaarNo = $_POST["aadhaarNo"];
-    $aadhaar = $_POST["aadhaar"];
+    $aadhaar = $_FILES["aadhaar"];
     // $exists=false;
 
 
 
+    $filename = $photo['name'];
+    $fileerror = $photo['error'];
+    $filetemo = $photo['tmp_name'];
+    $dss = 'upload/' . $filename;
+    move_uploaded_file($filetemo, $dss);
 
-    $sql = "INSERT INTO `registration` (`applicationno`, `fname`, `lname`,`dob`, `gender`, `country`, `phone`, `email`,`a1`,`city`, `state`, `zip`,`photo`, `sign`, `aadhaarNo```, `aadhaar`) VALUES ( '$applicationno','$fname','$lname','$dob','$gender', '$country', '$phone', '$email', '$a1', '$city', '$state', '$zip', '$photo', '$sign', '$aadhaarNo', '$aadhaar' )";
+    $filename1 = $sign['name'];
+    $fileerror1 = $sign['error'];
+    $filetemo1 = $sign['tmp_name'];
+    $dss1 = 'upload/' . $filename1;
+    move_uploaded_file($filetemo1, $dss1);
+
+    $filename2 = $aadhaar['name'];
+    $fileerror2 = $aadhaar['error'];
+    $filetemo2 = $aadhaar['tmp_name'];
+    $dss2 = 'upload/' . $filename2;
+    move_uploaded_file($filetemo2, $dss2);
+
+    $sql = "INSERT INTO `college` (`applicationno`, `fname`, `lname`,`dob`, `gender`, `country`, `phone`, `email`,`a1`,`city`, `state`, `zip`,`photo`, `sign`, `aadhaarNo```, `aadhaar`) VALUES ( '$applicationno','$fname','$lname','$dob','$gender', '$country', '$phone', '$email', '$a1', '$city', '$state', '$zip', '$dss', '$dss1', '$aadhaarNo', '$dss2' )";
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        $showAlert = true;
-        $_SESSION['applicationno'] = $applicationno;
-    } else {
-        $showError = true;
-    }
-    header("location: profile.php");
+         $showAlert = true;
+         $_SESSION['applicationno'] = $applicationno;
+     } else {
+          $showError = true;
+     }
+     header("location: profile.php");
 }
 
 
