@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="mb-3 p-3">
 
 
-                    <form method="post">
+                    <form method="post" enctype="multipart/form-data">
                         <fieldset>
                             <legend>
                                 <h1 class="fs-1 d-flex justify-content-center">Personal Details</h1>
