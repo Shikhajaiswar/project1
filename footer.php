@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Andika:ital@1&family=Archivo:wght@100&family=Brygada+1918&family=Inconsolata:wght@900&family=Nanum+Gothic&family=Oswald:wght@200&family=Sevillana&family=Ubuntu:wght@300&display=swap');
+
+        * {
+            font-family: 'Ubuntu', sans-serif;
+        }
         .footer-dark {
             padding: 50px 0;
             color: #f0f9ff;
@@ -126,7 +131,10 @@
                     </div>
                     <div class="col-md-6 item text">
                         <h3>Company Name</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                        <p>Content Owned and Maintained by Joint Admission Counselling, Delhi
+
+                            Designed, Developed and hosted by National Informatics Centre,
+                            Ministry of Electronics & Information Technology, Government of India.</p>
                     </div>
                     <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>
