@@ -54,9 +54,7 @@ echo '
         <li class="nav-item">
           <a class="nav-link active" href="institute.php">Institutes</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="Notices.php">Notices</a>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link active" href="contact.php">Contact Us</a>
         </li>
