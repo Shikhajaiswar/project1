@@ -38,13 +38,27 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             background-color: #5619a9;
             color: white;
         }
+
+        .nope {
+            display: none;
+        }
+
+        @media (max-width:63rem) {
+            .nope {
+                display: block;
+            }
+
+            .n {
+                display: none;
+            }
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <body>
     <?php include 'header.php'; ?>
-    <div class="p-5 ms-5 me-5 ">
+    <div class="p-5  n">
         <h1 class="fs-1">Institutes</h1><br>
         <table class="table  table-striped-column table-hover p-3">
             <!-- <thead class="head1">
@@ -94,6 +108,46 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
             </tbody>
         </table>
+    </div>
+    <div class="p-5  nope">
+        <h1 class="fs-1">Institutes</h1><br>
+        <div class="card">
+            <div class="card-header bordered-1 bg-dark text-light">
+                Institutes
+            </div>
+            <div class="card-body bordered-1 shadow rounded">
+
+                <p class="card-text">Title : Delhi Skill and Entrepreneurship University</p>
+                <p class="card-text">Session : 2023 </p>
+                <p class="card-text">View/Download:  <a href="https://dseu.ac.in/" target="_blank" aria-label="External site that opens in a new window" title="External site that opens in a new window" onclick="return confirm('You are being redirected to an external website. Please note that JOINT ADMISSION COUNSELLING, DELHI cannot be held responsible for external websites content &amp; privacy policies.');" rel="noopener noreferrer">  Delhi Skill and Entrepreneurship University <i class="fa fa-external-link-square"></i></a> </p>
+            </div>
+            <div class="card-body bordered-1 shadow rounded">
+
+                <p class="card-text">Title : Delhi Technological University</p>
+                <p class="card-text">Session : 2023 </p>
+                <p class="card-text">View/Download:  <a href="https://dtu.ac.in/" target="_blank" aria-label="External site that opens in a new window" title="External site that opens in a new window" onclick="return confirm('You are being redirected to an external website. Please note that JOINT ADMISSION COUNSELLING, DELHI cannot be held responsible for external websites content &amp; privacy policies.');" rel="noopener noreferrer">  Delhi Technological University <i class="fa fa-external-link-square"></i></a> </p>
+            </div>
+            <div class="card-body bordered-1 shadow rounded">
+
+                <p class="card-text">Title : Indira Gandhi Delhi Technical University for Women</p>
+                <p class="card-text">Session : 2023 </p>
+                <p class="card-text">View/Download:  <a href="https://igdtuw.ac.in/" target="_blank" aria-label="External site that opens in a new window" title="External site that opens in a new window" onclick="return confirm('You are being redirected to an external website. Please note that JOINT ADMISSION COUNSELLING, DELHI cannot be held responsible for external websites content &amp; privacy policies.');" rel="noopener noreferrer">  Indira Gandhi Delhi Technical University for Women <i class="fa fa-external-link-square"></i></a> </p>
+            </div>
+            <div class="card-body bordered-1 shadow rounded">
+
+                <p class="card-text">Title : Indraprastha Institute of Information Technology</p>
+                <p class="card-text">Session : 2023 </p>
+                <p class="card-text">View/Download:  <a href="https://iiitd.ac.in/" target="_blank" aria-label="External site that opens in a new window" title="External site that opens in a new window" onclick="return confirm('You are being redirected to an external website. Please note that JOINT ADMISSION COUNSELLING, DELHI cannot be held responsible for external websites content &amp; privacy policies.');" rel="noopener noreferrer">  Indraprastha Institute of Information Technology <i class="fa fa-external-link-square"></i></a> </p>
+            </div>
+            <div class="card-body bordered-1 shadow rounded">
+
+                <p class="card-text">Title : Netaji Subhas University of Technology</p>
+                <p class="card-text">Session : 2023 </p>
+                <p class="card-text">View/Download:  <a href="https://nsit.ac.in/" target="_blank" aria-label="External site that opens in a new window" title="External site that opens in a new window" onclick="return confirm('You are being redirected to an external website. Please note that JOINT ADMISSION COUNSELLING, DELHI cannot be held responsible for external websites content &amp; privacy policies.');" rel="noopener noreferrer">  NSUT<i class="fa fa-external-link-square"></i></a> </p>
+            </div>
+
+
+        </div>
     </div>
 
 
