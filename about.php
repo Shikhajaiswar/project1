@@ -5,8 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Andika:ital@1&family=Archivo:wght@100&family=Brygada+1918&family=Inconsolata:wght@900&family=Nanum+Gothic&family=Oswald:wght@200&family=Sevillana&family=Ubuntu:wght@300&display=swap');
+
+        * {
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+    </style>
+    </head>
 
 <body>
     <?php include 'header.php';?>
