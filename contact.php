@@ -15,46 +15,25 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 
 <?php
 $a = "";
-$b = 0;
+$b = -1;
 $login = false;
 $showError = false;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     include 'dbconnect.php';
-    $applicationno = $_POST["applicationno"];
-    $password = $_POST["password"];
-
-
-    $username = "SELECT username FROM `userdata` WHERE applicationno='$applicationno'";
-
-    $sql = "SELECT * FROM `userdata` WHERE applicationno='$applicationno'";
+    $name=$_POST['name'];
+    $email=$_POST['email'];
+    $msg=$_POST['message'];
+    $sql = "INSERT INTO `contact` (`name`, `email`, `msg`) VALUES ('$name', '$email', '$msg');";
     $result = mysqli_query($conn, $sql);
-    $num = mysqli_num_rows($result);
-
-    if ($num == 1) {
-        // $sql1 = "SELECT * FROM `userdata` WHERE applicationno='$applicationno' AND cpassword='$password'";
-        // $result1 = mysqli_query($conn, $sql1);
-        while ($row = mysqli_fetch_assoc($result)) {
-            if (password_verify($password, $row['password'])) {
-                $login = true;
-                session_start();
-                $_SESSION['loggedin'] = true;
-                $_SESSION['applicationno'] = $applicationno;
-
-
-                $sql1 = "SELECT username FROM `userdata` WHERE applicationno='$applicationno'";
-                $result1 = mysqli_query($conn, $sql1);
-                $row1 = mysqli_fetch_assoc($result1);
-                $_SESSION['username'] = $row1['username'];
-
-
-                header("location: home.php");
-            } else {
-                $showError = "Wrong Password";
-            }
-        }
-    } else {
-        $showError = "The application No. you entered isn't connected to an account.";
+    if($result){
+        $b = 1;
+        // echo '<script>swal("Good job!", " Sucessfully Submitted!", "success")</script>';
     }
+    else{
+        $b = 0;
+        $a = "Error!";
+    }
+
 }
 
 ?>
@@ -68,7 +47,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>PaathShaala</title>
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <!-- <script src="pawan.js"></script> -->
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <link rel="shortcut icon" href="loggoo.png" type="image/x-icon">
+
     <style>
         .background {
             background: rgba(0, 0, 0, 0.7) url("My Portforlio/back.webp");
@@ -239,7 +233,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                         echo "<script>
                 
-                swal('ERROR!','$a','error')
+                swal('ERROR!','Please Enter Correct Details!','error')
                 
                 </script>";
                     } ?>
@@ -248,11 +242,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form">
                 <form method="post">
 
-                    <input type="text" name="name" id="name" class="name input" placeholder=" Name">
+                    <input type="text" name="name" id="name" class="name input" placeholder=" Name" required>
                     <br><br>
-                    <input type="email" name="email" id="email" placeholder=" Email" class="email input">
+                    <input type="email" name="email" id="email" placeholder=" Email" class="email input" required>
                     <br><br>
-                    <textarea name="message" id="msg" cols="8" rows="4" placeholder="Message..." class="msg input"></textarea>
+                    <textarea name="message" id="msg" cols="8" rows="4" placeholder="Message..." class="msg input" required></textarea>
                     <br><br>
 
                     <button "type=" submit" value="Submit" class="submit input b" id="submit" style="background: #5619a9;">
